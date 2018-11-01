@@ -10,12 +10,15 @@ place_1 = 0
 answer_1 = 'да + yes'
 answer_2 = 'no нет -'
 answer = 'да'
+
 print('БУКВЫ: А,Е,Н,О,С,Т')
 print('Угадайте четырехбуквенное слово из данных букв.')
+
 while answer.lower() in answer_1:
     while i != 10:
         word_1 = input('Введите слово: ')
         i += 1
+
         if len(word_1) < 4:
             print('Недостаточно букв! Слово состоит из 4 букв!')
         elif len(word_1) > 4:
@@ -33,6 +36,7 @@ while answer.lower() in answer_1:
                 else:
                     place += 0
                     place_1 += 0
+
             if place == 3:
                 print('Вы почти угадали!')
             print('На "своем месте": ', place)
